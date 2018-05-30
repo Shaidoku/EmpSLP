@@ -1,0 +1,75 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ 'SIGNUP_TITLE' | translate }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <form (submit)="doSignup()">
+    <ion-list>
+
+      <ion-item>
+        <ion-label fixed>{{ 'EMAIL' | translate }}</ion-label>
+        <ion-input type="email" [(ngModel)]="account.email" name="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>{{ 'Foto' | translate }}</ion-label>
+        <ion-input type="email" [(ngModel)]="account.foto" name="foto"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>{{ 'Nombres' | translate }}</ion-label>
+        <ion-input type="text" [(ngModel)]="account.name" name="name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>{{ 'Apellido Paterno' | translate }}</ion-label>
+        <ion-input type="text" [(ngModel)]="account.app" name="app"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>{{ 'Apellido Materno' | translate }}</ion-label>
+        <ion-input type="text" [(ngModel)]="account.apm" name="apm"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>{{ 'Edad' | translate }}</ion-label>
+        <ion-input type="text" [(ngModel)]="account.ed" name="ed"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>{{ 'Ocupacion' | translate }}</ion-label>
+        <ion-input type="text" [(ngModel)]="account.ocp" name="ocp"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>{{ 'Conocimientos' | translate }}</ion-label>
+        <ion-input type="text" [(ngModel)]="account.cn" name="cn"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>{{ 'Sexo' | translate }}</ion-label>
+        <ion-input type="text" [(ngModel)]="account.sx" name="sx"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>{{ 'PASSWORD' | translate }}</ion-label>
+        <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>{{ 'Telefono' | translate }}</ion-label>
+        <ion-input type="text" [(ngModel)]="account.tl" name="tl"></ion-input>
+      </ion-item>
+
+      <div padding>
+        <button ion-button color="primary" block>{{ 'SIGNUP_BUTTON' | translate }}</button>
+      </div>
+
+    </ion-list>
+  </form>
+</ion-content>
