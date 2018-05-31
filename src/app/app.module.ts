@@ -12,11 +12,6 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { Items } from '../mocks/providers/items';
 import { Settings, User, Api } from '../providers';
 import { MyApp } from './app.component';
-import { UsuariosProvider } from '../providers/usuarios/usuarios';
-import { ProyectosProvider } from '../providers/proyectos/proyectos';
-import { NoticiasProvider } from '../providers/noticias/noticias';
-import { MensajesProvider } from '../providers/mensajes/mensajes';
-import { EventosProvider } from '../providers/eventos/eventos';
 
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
@@ -69,12 +64,7 @@ export function provideSettings(storage: Storage) {
     StatusBar,
     { provide: Settings, useFactory: provideSettings, deps: [Storage] },
     // Keep this to enable Ionic's runtime error handling during development
-    { provide: ErrorHandler, useClass: IonicErrorHandler },
-    UsuariosProvider,
-    ProyectosProvider,
-    NoticiasProvider,
-    MensajesProvider,
-    EventosProvider
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
 export class AppModule { }

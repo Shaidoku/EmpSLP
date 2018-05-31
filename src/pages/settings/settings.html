@@ -10,23 +10,26 @@
 
   <form [formGroup]="form" *ngIf="settingsReady">
     <ion-list *ngIf="page == 'main'">
+
       <ion-item>
         <ion-label>{{ 'SETTINGS_OPTION1' | translate }}</ion-label>
-        <ion-toggle formControlName="option1"></ion-toggle>
+        <ion-select formControlName="option1">
+          <ion-option value="1" checked="true">Español</ion-option>
+          <ion-option value="2">Inglés</ion-option>
+          <ion-option value="3">Frances</ion-option>
+        </ion-select>
       </ion-item>
 
       <ion-item>
         <ion-label>{{ 'SETTINGS_OPTION2' | translate }}</ion-label>
-        <ion-input formControlName="option2"></ion-input>
+        <ion-select formControlName="option2">
+        <ion-option value="1" checked="true">Español</ion-option>
+        </ion-select>
       </ion-item>
 
       <ion-item>
         <ion-label>{{ 'SETTINGS_OPTION3' | translate }}</ion-label>
-        <ion-select formControlName="option3">
-          <ion-option value="1" checked="true">1</ion-option>
-          <ion-option value="2">2</ion-option>
-          <ion-option value="3">3</ion-option>
-        </ion-select>
+        <ion-toggle formControlName="option3"></ion-toggle>
       </ion-item>
 
       <button ion-item [navPush]="subSettings" [navParams]="profileSettings">

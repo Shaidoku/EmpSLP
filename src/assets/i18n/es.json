@@ -1,30 +1,41 @@
 {
+  "BACK_BUTTON_TEXT": "Back",
+
   "NAME": "Nombre",
-  "PASSWORD": "Contraseña",
   "EMAIL": "Email",
+  "PASSWORD": "Contraseña",
   "LOGIN": "Iniciar sesión",
   "SIGNUP": "Registrarse",
 
-  "TAB1_TITLE": "Items",
+  "TAB1_TITLE": "Eventos",
   "TAB2_TITLE": "Buscar",
   "TAB3_TITLE": "Ajustes",
 
   "MAP_TITLE": "Mapa",
 
-  "TUTORIAL_SLIDE1_TITLE": "Bienvenido/a al Ionic Super Starter",
-  "TUTORIAL_SLIDE1_DESCRIPTION": "El <b>Ionic Super Starter</b> es un starter de Ionic completo con muchas páginas preconstruidas y mejores prácticas.",
+  "TUTORIAL_SKIP_BUTTON": "Saltar",
+  "TUTORIAL_CONTINUE_BUTTON": "Ingresar",
 
-  "TUTORIAL_SLIDE2_TITLE": "Cómo usar el Super Starter",
-  "TUTORIAL_SLIDE2_DESCRIPTION": "Monta los varios tipos de página que quieras y quita los que no. Hemos incluido muchas estructuras de página comunes en apps móviles, como páginas de inicio de sesión y registro, pestañas, y esta página de tutorial.",
+  "TUTORIAL_SLIDE1_TITLE": "¿Quienes somos?",
+  "TUTORIAL_SLIDE1_DESCRIPTION": "Somos una comunidad en beneficio de los emprendedores potosinos",
 
-  "TUTORIAL_SLIDE3_TITLE": "Empezando",
-  "TUTORIAL_SLIDE3_DESCRIPTION": "¿Necesitas ayuda? Échale un vistazo al README del Super Starter para ver el tutorial completo.",
+  "TUTORIAL_SLIDE2_TITLE": "¿Quieres fondear tu proyecto?",
+  "TUTORIAL_SLIDE2_DESCRIPTION": "Emprendedores S.L.P. te apoya con la difusíon",
+
+  "TUTORIAL_SLIDE3_TITLE": "¿Que hacemos?",
+  "TUTORIAL_SLIDE3_DESCRIPTION": "Proporcionamos información de utilidad para emprendedores",
+
+  "TUTORIAL_SLIDE4_TITLE": "Forma parte de nuestra comunidad",
+
+  "WELCOME_INTRO": "Bienvenido a Emprendedores SLP",
 
   "SETTINGS_TITLE": "Ajustes",
-  "SETTINGS_OPTION1": "Opción 1",
-  "SETTINGS_OPTION2": "Opción 2",
-  "SETTINGS_OPTION3": "Opción 3",
-  "SETTINGS_OPTION4": "Opción 4",
+  "SETTINGS_OPTION1": "Idioma",
+  "SETTINGS_OPTION2": "Hacerse premium",
+  "SETTINGS_OPTION3": "Tema oscuro",
+  "SETTINGS_OPTION4": "Editar Perfil",
+
+   "SETTINGS_PROFILE_BUTTON": "Editar Perfil",
 
   "SETTINGS_PAGE_PROFILE": "Editar Perfil",
 
@@ -37,12 +48,20 @@
   "SIGNUP_ERROR": "No se ha podido crear la cuenta. Por favor revisa la información de la cuenta e inténtalo de nuevo.",
   "SIGNUP_BUTTON": "Registrarse",
 
-  "LIST_MASTER_TITLE": "Items",
+  "LIST_MASTER_TITLE": "Nuevo evento",
 
   "ITEM_CREATE_TITLE": "Nuevo Item",
   "ITEM_CREATE_CHOOSE_IMAGE": "Añadir Imagen",
 
+  "ITEM_NAME_PLACEHOLDER": "Nombre",
+  "ITEM_ABOUT_PLACEHOLDER": "Acerca de...",
+
+  "DONE_BUTTON": "Hecho",
+  "CANCEL_BUTTON": "Cancelar",
+  "DELETE_BUTTON": "Borrar",
+
   "CARDS_TITLE": "Social",
 
-  "SEARCH_TITLE": "Buscar"
+  "SEARCH_TITLE": "Buscar",
+  "SEARCH_PLACEHOLDER": "Buscar usuario"
 }

@@ -3,7 +3,6 @@
 
   "NAME": "Name",
   "EMAIL": "Email",
-  "USERNAME": "Username",
   "PASSWORD": "Password",
   "LOGIN": "Sign in",
   "SIGNUP": "Sign up",
@@ -31,7 +30,7 @@
   "WELCOME_INTRO": "The starting point for your next great Ionic app",
 
   "SETTINGS_TITLE": "Settings",
-  "SETTINGS_OPTION1": "Option 1",
+  "SETTINGS_OPTION1": "Spanish/English",
   "SETTINGS_OPTION2": "Option 2",
   "SETTINGS_OPTION3": "Option 3",
   "SETTINGS_OPTION4": "Option 4",
