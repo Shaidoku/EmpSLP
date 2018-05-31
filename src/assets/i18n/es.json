@@ -12,6 +12,7 @@
   "TAB1_TITLE": "Eventos",
   "TAB2_TITLE": "Buscar",
   "TAB3_TITLE": "Ajustes",
+  "TAB4_TITLE": "Perfil",
 
   "MAP_TITLE": "Mapa",
 
@@ -34,6 +35,7 @@
   "SETTINGS_TITLE": "Ajustes",
   "SETTINGS_OPTION1": "Idioma",
   "SETTINGS_OPTION2": "Hacerse premium",
+  "SETTINGS_OPTION2.1": "https://www.paypal.com/mx/webapps/mpp/home?gclid=EAIaIQobChMIi_Dc3qev2wIVULbACh18_wHbEAAYASAAEgIRsPD_BwE&gclsrc=aw.ds&dclid=CJLf39-nr9sCFQTfwAoda-kKPA",
   "SETTINGS_OPTION3": "Tema oscuro",
   "SETTINGS_OPTION4": "Editar Perfil",
 
