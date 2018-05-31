@@ -20,9 +20,14 @@ export class ItemCreatePage {
   constructor(public navCtrl: NavController, public viewCtrl: ViewController, formBuilder: FormBuilder, public camera: Camera) {
     this.form = formBuilder.group({
       profilePic: [''],
-      name: ['', Validators.required],
-      about: ['']
-    });
+        ti: ['', Validators.required],
+        de: ['', Validators.required],
+        fe: ['', Validators.required],
+        hr: ['', Validators.required],
+        lu: ['', Validators.required],
+        co: ['', Validators.required],
+        cn: ['', Validators.required],
+        en: ['', Validators.required]});
 
     // Watch the form for changes, and
     this.form.valueChanges.subscribe((v) => {

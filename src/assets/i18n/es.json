@@ -46,19 +46,24 @@
   "WELCOME_TITLE": "Bienvenido/a",
 
   "LOGIN_TITLE": "Iniciar sesión",
-  "LOGIN_ERROR": "No se ha podido iniciar sesión. Por favor revisa la información de la cuenta e inténtalo de nuevo.",
+  "LOGIN_ERROR": "Bienvenido Emprendedor.",
   "LOGIN_BUTTON": "Iniciar sesión",
   "SIGNUP_TITLE": "Registro",
-  "SIGNUP_ERROR": "No se ha podido crear la cuenta. Por favor revisa la información de la cuenta e inténtalo de nuevo.",
+  "SIGNUP_ERROR": "Bienvenido Emprendedor.",
   "SIGNUP_BUTTON": "Registrarse",
 
   "LIST_MASTER_TITLE": "Nuevo evento",
 
-  "ITEM_CREATE_TITLE": "Nuevo Item",
-  "ITEM_CREATE_CHOOSE_IMAGE": "Añadir Imagen",
-
-  "ITEM_NAME_PLACEHOLDER": "Nombre",
-  "ITEM_ABOUT_PLACEHOLDER": "Acerca de...",
+  "ITEM_CREATE_TITLE": "Nuevo evento",
+  "ITEM_CREATE_CHOOSE_IMAGE": "Añadir Imagen del evento",
+  "ITEM_NEW1": "Titulo",
+  "ITEM_NEW2": "Describcion",
+  "ITEM_NEW3": "Fecha",
+  "ITEM_NEW4": "Hora",
+  "ITEM_NEW5": "Enlace a maps",
+  "ITEM_NEW6": "Costo",
+  "ITEM_NEW7": "Tlf",
+  "ITEM_NEW8": "Link..",
 
   "DONE_BUTTON": "Hecho",
   "CANCEL_BUTTON": "Cancelar",

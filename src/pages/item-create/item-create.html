@@ -10,6 +10,7 @@
         <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
       </button>
     </ion-buttons>
+
     <ion-buttons end>
       <button ion-button (click)="done()" [disabled]="!isReadyToSave" strong>
         <span color="primary" showWhen="ios">
@@ -35,13 +36,40 @@
       </div>
       <div class="profile-image" [style.backgroundImage]="getProfileImageStyle()" *ngIf="this.form.controls.profilePic.value"></div>
     </div>
+
     <ion-list>
       <ion-item>
-        <ion-input type="text" placeholder="{{ 'ITEM_NAME_PLACEHOLDER' | translate }}" formControlName="name"></ion-input>
+        <ion-input type="text" placeholder="{{ 'ITEM_NEW1' | translate }}" formControlName="ti"></ion-input>
       </ion-item>
+
       <ion-item>
-        <ion-input type="text" placeholder="{{ 'ITEM_ABOUT_PLACEHOLDER' | translate }}" formControlName="about"></ion-input>
+        <ion-input type="text" placeholder="{{ 'ITEM_NEW2' | translate }}" formControlName="de"></ion-input>
       </ion-item>
+
+      <ion-item>
+        <ion-input type="text" placeholder="{{ 'ITEM_NEW3' | translate }}" formControlName="fe"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="text" placeholder="{{ 'ITEM_NEW4' | translate }}" formControlName="hr"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="text" placeholder="{{ 'ITEM_NEW5' | translate }}" formControlName="lu"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="text" placeholder="{{ 'ITEM_NEW6' | translate }}" formControlName="co"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="text" placeholder="{{ 'ITEM_NEW7' | translate }}" formControlName="cn"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="text" placeholder="{{ 'ITEM_NEW8' | translate }}" formControlName="en"></ion-input>
+      </ion-item>
+
     </ion-list>
   </form>
 </ion-content>
