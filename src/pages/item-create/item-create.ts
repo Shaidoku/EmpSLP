@@ -27,7 +27,9 @@ export class ItemCreatePage {
         lu: ['', Validators.required],
         co: ['', Validators.required],
         cn: ['', Validators.required],
-        en: ['', Validators.required]});
+        en: ['', Validators.required],
+        cl: ['assets/img/cl.png']
+      });
 
     // Watch the form for changes, and
     this.form.valueChanges.subscribe((v) => {

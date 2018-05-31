@@ -7,6 +7,7 @@ export class Items {
   items: Item[] = [];
 
   defaultItem: any = {
+        "profilePic": "assets/img/eventos/ta.png",
         "ti": "Financiando el Cambio: La importancia de la sustentabilidad",
         "de": "Presidente de la Fundación Liderazgo Joven y Director General de RASAVA Group, un grupo de negocios conformado por (CILFORSA, ORGANIQUO, VERDEVENTOS, GLOBAL INSTITUTE FOR STANDARDIZATION y DIVIDENDEE) En CILFORSA. Construcción Sustentable impulsa las construcciones ecológicas hechas con botellas reutilizadas de PET y vidrio.",
         "fe": "05/06/2018",
@@ -22,6 +23,7 @@ export class Items {
   constructor() {
     let items = [
       {
+        "profilePic": "assets/img/eventos/co.jpg",
         "ti": "Financiando el Cambio: La importancia de la sustentabilidad",
         "de": "Presidente de la Fundación Liderazgo Joven y Director General de RASAVA Group, un grupo de negocios conformado por (CILFORSA, ORGANIQUO, VERDEVENTOS, GLOBAL INSTITUTE FOR STANDARDIZATION y DIVIDENDEE) En CILFORSA. Construcción Sustentable impulsa las construcciones ecológicas hechas con botellas reutilizadas de PET y vidrio.",
         "fe": "05/06/2018",
@@ -33,6 +35,7 @@ export class Items {
         "cl":"assets/img/cl.png"
       },
       {
+        "profilePic": "assets/img/eventos/ta.png",
         "ti": "Taller ARDEX - Sesión 2",
         "de": "ARDEX AMERICAS es una empresa de origen alemán, pionera en productos derivados del cemento que han revolucionado la industria de la construcción por su extraordinaria calidad y el costo - beneficio que trae a los contratistas por la alta resistencia de sus productos, rápidos tiempos de secado, fácil preparación y aplicación y sobre todo, por la confianza que inspira la empresa al otorgar garantías sobre proyectos enteros.",
         "fe": "12/06/2018",
@@ -44,8 +47,9 @@ export class Items {
         "cl":"assets/img/cl.png"
       },
       {
+        "profilePic": "assets/img/eventos/co.jpg",
         "ti": "Emprendiendo con Innovación ",
-        "de": "",
+        "de": "Conferencia...",
         "fe": "23/06/2018",
         "hr": "17:15 Hr",
         "lu": "https://www.google.com.mx/maps/place/Universidad+Potosina/@22.1492118,-100.9598719,15z/data=!4m5!3m4!1s0x0:0xd079aa952c936f93!8m2!3d22.1486356!4d-100.9714419",
