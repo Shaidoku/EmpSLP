@@ -6,8 +6,30 @@
       {{ 'WELCOME_INTRO' | translate }}
     </div>
   </div>
-  <div padding>
-    <button ion-button block (click)="signup()">{{ 'SIGNUP' | translate }}</button>
-    <button ion-button block (click)="login()" class="login">{{ 'LOGIN' | translate }}</button>
+
+  <form (submit)="doLogin()">
+    <ion-list inset>
+
+      <ion-item>
+        <ion-label floating>{{ 'EMAIL' | translate }}</ion-label>
+        <ion-input type="email" [(ngModel)]="account.email" name="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>{{ 'PASSWORD' | translate }}</ion-label>
+        <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
+      </ion-item>
+
+      <div padding>
+        <button ion-button color="secondary" >{{ 'LOGIN_BUTTON' | translate }}</button>
+      </div>
+
+    </ion-list>
+  </form>
+  <div padding class="centrado">
+   <p><ion-label floating>{{ 'JOIN_UP' | translate }}</ion-label></p>
+   </div>
+  <div padding class="centrado">
+    <p><button ion-button color="secondary" (click)="signup()">{{ 'SIGNUP' | translate }}</button></p>
   </div>
 </ion-content>

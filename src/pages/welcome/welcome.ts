@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { TranslateService } from '@ngx-translate/core';
+import { IonicPage, NavController, ToastController } from 'ionic-angular';
 
-/**
- * The Welcome Page is a splash page that quickly describes the app,
- * and then directs the user to create an account or log in.
- * If you'd like to immediately put the user onto a login/signup page,
- * we recommend not using the Welcome page.
-*/
+import { User } from '../../providers';
+import { MainPage } from '../';
+
 @IonicPage()
 @Component({
   selector: 'page-welcome',
@@ -14,7 +12,37 @@ import { IonicPage, NavController } from 'ionic-angular';
 })
 export class WelcomePage {
 
-  constructor(public navCtrl: NavController) { }
+	account: { email: string, password: string } = {
+    email: 'ing.antonio.gutierrezgarcia@outlook.com',
+    password: 'ha756STRfa5'
+    };
+
+    private loginErrorString: string;
+
+  constructor(public navCtrl: NavController,
+    public user: User,
+    public toastCtrl: ToastController,
+    public translateService: TranslateService) {
+
+    this.translateService.get('LOGIN_ERROR').subscribe((value) => {
+      this.loginErrorString = value;
+    }) 
+}
+
+doLogin() {
+    this.user.login(this.account).subscribe((resp) => {
+      this.navCtrl.push(MainPage);
+    }, (err) => {
+      this.navCtrl.push(MainPage);
+      // Unable to log in
+      let toast = this.toastCtrl.create({
+        message: this.loginErrorString,
+        duration: 3000,
+        position: 'top'
+      });
+      toast.present();
+    });
+  }
 
   login() {
     this.navCtrl.push('LoginPage');
