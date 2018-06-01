@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>News</ion-title>
+    <ion-title>Noticias</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,4 +15,20 @@
 
 <ion-content padding>
 
+<ion-list ion-item *ngFor="let news of newss">	
+<ion-card>
+  <img src="assets/img/noticias/{{news.fotoN}}"/>
+  <ion-card-content>
+  	<p>
+      {{news.tituloN}}
+    </p>
+    <p>
+      {{news.descripcion}}
+    </p>
+  </ion-card-content>
+</ion-card>
+</ion-list>
+
 </ion-content>
+
+
