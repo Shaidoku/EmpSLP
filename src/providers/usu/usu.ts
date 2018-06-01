@@ -2,14 +2,14 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable()
-export class NewssProvider {
+export class UsuProvider {
 
   constructor(public http: HttpClient) {
-    console.log('Hello NewssProvider Provider');
+    console.log('Hello UsuProvider Provider');
   }
-
-  obNe(){
-  	return this.http.get('http://localhost/app/index.php/noticiaC');
+  
+  obUs(){
+  	return this.http.get('http://localhost/app/index.php/usuarioC');
   }
 
 }
