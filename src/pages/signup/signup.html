@@ -11,22 +11,7 @@
   <form (submit)="doSignup()">
     <ion-list inset>
 
-      <ion-item>
-            <ion-label floating>Email</ion-label>
-            <ion-input type="text" #username></ion-input>
-          </ion-item>
-        
-          <ion-item>
-            <ion-label floating>Password</ion-label>
-            <ion-input type="password" #password></ion-input>
-          </ion-item>
-
-          <ion-item>
-            <ion-label floating>Confirmar Password</ion-label>
-            <ion-input type="password" #confpass></ion-input>
-          </ion-item>
-
-          <ion-item>
+        <ion-item>
             <ion-label floating>Nombre(s)</ion-label>
             <ion-input type="text" #name></ion-input>
           </ion-item>
@@ -41,9 +26,24 @@
             <ion-input type="text" #apellidoM></ion-input>
           </ion-item>
 
+      <ion-item>
+            <ion-label floating>Correo Electrónico</ion-label>
+            <ion-input type="text" #username></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>Contraseña</ion-label>
+            <ion-input type="password" #password></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>Confirmar Contraseña</ion-label>
+            <ion-input type="password" #confpass></ion-input>
+          </ion-item>
+
           <ion-item>
             <ion-label floating>Edad</ion-label>
-            <ion-input type="text" #Edad></ion-input>
+            <ion-input type="number" #Edad></ion-input>
           </ion-item>
 
       <div padding>
