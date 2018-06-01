@@ -15,17 +15,11 @@
 
 <ion-content padding>
 
-<ion-list ion-item *ngFor="let news of newss">	
+<ion-list ion-item *ngFor="let news of newss">
+<h2>{{news.tituloN}}</h2>	
 <ion-card>
   <img src="assets/img/noticias/{{news.fotoN}}"/>
-  <ion-card-content>
-  	<p>
-      {{news.tituloN}}
-    </p>
-    <p>
-      {{news.descripcion}}
-    </p>
-  </ion-card-content>
+  <ion-card-content><p>{{news.descripcion}}</p></ion-card-content>
 </ion-card>
 </ion-list>
 
