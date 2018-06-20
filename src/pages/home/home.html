@@ -1,0 +1,21 @@
+<ion-content no-bounce>
+
+  <ion-slides pager="true">
+
+    <ion-slide *ngFor="let intro of intros">
+      <img [src]="intro.image" class="slide-image" />
+      <h2 class="slide-title">{{intro.titulo}}</h2>
+      <p>{{intro.description}}</p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/ica-slidebox-img-4.jpg" class="slide-image" />
+      <h2 class="slide-title">Forma parte de nuestra comunidad</h2>
+      <button ion-button icon-end large clear (click)="iraLogin()">
+        Ingresar<ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-slide>
+
+  </ion-slides>
+
+</ion-content>

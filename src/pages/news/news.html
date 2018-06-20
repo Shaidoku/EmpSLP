@@ -1,22 +1,18 @@
-<!--
-  Generated template for the NewsPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>Noticias</ion-title>
+    <ion-title>Noticias</ion-title><ion-buttons end>
+    <button ion-button icon-only (click)="goNews()">
+      <ion-icon name="md-arrow-round-forward"></ion-icon>
+    </button>
+  </ion-buttons>
   </ion-navbar>
-
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
 
-<ion-list ion-item *ngFor="let news of newss">
-<h2>{{news.tituloN}}</h2>	
+<ion-list *ngFor="let news of newss">
+<h4><b>{{news.tituloN}}</b></h4>
 <ion-card>
   <img src="assets/img/noticias/{{news.fotoN}}"/>
   <ion-card-content><p>{{news.descripcion}}</p></ion-card-content>
@@ -25,5 +21,3 @@
 </ion-list>
 
 </ion-content>
-
-

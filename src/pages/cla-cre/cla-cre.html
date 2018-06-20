@@ -1,0 +1,65 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Crear</ion-title>
+
+    <ion-buttons start>
+      <button ion-button (click)="cancel()">
+        <span color="primary" showWhen="ios">
+        </span>
+        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content padding>
+
+	<ion-list>
+      <ion-item>
+      	<ion-label floating>Titulo</ion-label>
+        <ion-input type="text" name="ti"></ion-input>
+      </ion-item>
+
+      <ion-item>
+      	<ion-label floating>Descripcion</ion-label>
+        <ion-input type="text" name="de"></ion-input>
+      </ion-item>
+
+      <ion-item>
+      	<ion-label floating>Fecha</ion-label>
+        <ion-input type="text" name="fe"></ion-input>
+      </ion-item>
+
+      <ion-item>
+      	<ion-label floating>Hora</ion-label>
+        <ion-input type="text" name="hr"></ion-input>
+      </ion-item>
+
+      <ion-item>
+      	<ion-label floating>Enlace a Maps</ion-label>
+        <ion-input type="text" name="lu"></ion-input>
+      </ion-item>
+
+      <ion-item>
+      	<ion-label floating>Costo</ion-label>
+        <ion-input type="text" name="co"></ion-input>
+      </ion-item>
+
+      <ion-item>
+      	<ion-label floating>Tlf.</ion-label>
+        <ion-input type="text" name="cn"></ion-input>
+      </ion-item>
+
+      <ion-item>
+      	<ion-label floating>Link</ion-label>
+        <ion-input type="text" name="en"></ion-input>
+      </ion-item>
+
+    </ion-list>
+
+</ion-content>

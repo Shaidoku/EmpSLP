@@ -1,30 +1,39 @@
-<ion-header>
+<ion-content scroll="false">
+  <div class="splash-bg"></div>
+  <div class="splash-info">
+    <div class="splash-logo"></div>
+    <div class="splash-intro">
+      Bienvenido a Emprendedores SLP
+    </div>
+  </div>
 
-  <ion-navbar>
-    <ion-title>{{ 'LOGIN_TITLE' | translate }}</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content>
-  <form (submit)="doLogin()">
+  <form (click)="enter()">
     <ion-list inset>
 
       <ion-item>
-        <ion-label floating>{{ 'EMAIL' | translate }}</ion-label>
+        <ion-label floating>Email</ion-label>
         <ion-input type="email" [(ngModel)]="account.email" name="email"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label floating>{{ 'PASSWORD' | translate }}</ion-label>
+        <ion-label floating>Password</ion-label>
         <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
       </ion-item>
 
       <div padding>
-        <button ion-button color="primary" block>{{ 'LOGIN_BUTTON' | translate }}</button>
+        <button ion-button color="secondary">Iniciar sesión</button>
       </div>
-
     </ion-list>
   </form>
+  <div padding class="centrado">
+   <p><ion-label floating>¿Aún no tienes una cuenta? o Ingresa con</ion-label></p>
+  </div>
+
+  <div padding class="centrado">
+   <p><button ion-button color="secondary" (click)="signup()">Regístrate</button></p>
+  </div>
+        <div padding>
+        <a href="www.facebook.com"><img src="assets/img/facebook.png" width="45" height="45"/></a>
+        <a href="https://accounts.google.com/signin/v2/identifier?passive=1209600&continue=https%3A%2F%2Faccounts.google.com%2FManageAccount&followup=https%3A%2F%2Faccounts.google.com%2FManageAccount&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><img src="assets/img/google.png" width="48" height="48"/></a>
+      </div>
 </ion-content>

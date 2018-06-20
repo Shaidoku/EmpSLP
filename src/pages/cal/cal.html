@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Eventos</ion-title> <ion-buttons end>
+    <button ion-button icon-only (click)="goNews()">
+      <ion-icon name="md-arrow-round-forward"></ion-icon>
+    </button>
+  </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-buttons end>
+    <h5>Añadir evento
+    <button ion-button icon-only (click)="add()">
+      <ion-icon name="add"></ion-icon>
+    </button></h5>
+  </ion-buttons>
+
+  <ion-list inset>
+    <ion-item-sliding *ngFor="let cal of cals">
+      <button ion-item (click)="openCal(cal)">
+        <ion-avatar item-start>
+        <img src="assets/img/cl.png" /> 
+        </ion-avatar>
+        <h2>{{cal.tituloE}}</h2>
+        <p>{{cal.fecha}}</p>
+      </button>
+    </ion-item-sliding>
+  </ion-list>
+
+</ion-content>
