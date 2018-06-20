@@ -24,5 +24,8 @@ export class NewsPage {
   goNews(cal) {
     this.navCtrl.push('PerfilPage',{cal:cal});
   }
+  goMenu() {
+    this.navCtrl.setRoot('MenuPage');
+  }
 
 }

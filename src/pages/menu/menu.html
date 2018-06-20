@@ -1,0 +1,77 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Menu</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list inset>
+    <ion-item-sliding>
+      <button ion-item (click)="goPerf()">
+        <ion-avatar item-start>
+        <ion-icon name="person"></ion-icon> 
+        </ion-avatar>
+        <h2>Perfil</h2>
+      </button>
+    </ion-item-sliding>
+
+    <ion-item-sliding>
+      <button ion-item (click)="goNews()">
+        <ion-avatar item-start>
+        <ion-icon name="paper"></ion-icon>   
+        </ion-avatar>
+        <h2>Noticias</h2>
+      </button>
+    </ion-item-sliding>
+
+    <ion-item-sliding>
+      <button ion-item (click)="goCal()">
+        <ion-avatar item-start>
+        <ion-icon name="calendar"></ion-icon>
+        </ion-avatar>
+        <h2>Calendario</h2>
+      </button>
+    </ion-item-sliding>
+
+    <ion-item-sliding>
+      <button ion-item (click)="go()">
+        <ion-avatar item-start>
+        <ion-icon name="search"></ion-icon>
+        </ion-avatar>
+        <h2>Busqueda</h2>
+      </button>
+    </ion-item-sliding>
+
+    <ion-item-sliding>
+      <button ion-item (click)="go()">
+        <ion-avatar item-start>
+        <ion-icon name="contacts"></ion-icon>
+        </ion-avatar>
+        <h2>Contactos</h2>
+      </button>
+    </ion-item-sliding>
+
+    <ion-item-sliding>
+      <button ion-item (click)="go()">
+        <ion-avatar item-start>
+        <ion-icon name="mail"></ion-icon>
+        </ion-avatar>
+        <h2>Mensajes</h2>
+      </button>
+    </ion-item-sliding>
+
+    <ion-item-sliding>
+      <button ion-item (click)="go()">
+        <ion-avatar item-start>
+        <ion-icon name="settings"></ion-icon>
+        </ion-avatar>
+        <h2>Configuraciones</h2>
+      </button>
+    </ion-item-sliding>
+
+  </ion-list>
+</ion-content>

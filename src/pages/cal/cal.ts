@@ -25,8 +25,8 @@ export class CalPage {
   openCal(cal) {
     this.navCtrl.push('CalDetPage',{cal:cal});
   }
-  goNews(cal) {
-    this.navCtrl.push('NewsPage',{cal:cal});
+  goMenu() {
+    this.navCtrl.setRoot('MenuPage');
   }
 add() {
     let addModal = this.modalCtrl.create('ClaCrePage');
