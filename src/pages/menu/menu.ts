@@ -15,14 +15,25 @@ export class MenuPage {
     console.log('ionViewDidLoad MenuPage');
   }
 
-  goPerf() {
+  goPer() {
     this.navCtrl.setRoot('PerfilPage');
   }
-  goNews() {
+  goNew() {
     this.navCtrl.setRoot('NewsPage');
   }
   goCal() {
     this.navCtrl.setRoot('CalPage');
   }
-
+  goBus() {
+    this.navCtrl.setRoot('BusquedaPage');
+  }
+  goCon() {
+    this.navCtrl.setRoot('ContactosPage');
+  }
+  goMen() {
+    this.navCtrl.setRoot('MensajesPage');
+  }
+  goConf() {
+    this.navCtrl.setRoot('ConfigPage');
+  }
 }
