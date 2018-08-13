@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { BaseExProvider } from '../../providers/base-ex/base-ex';
+
 
 @IonicPage()
 @Component({
@@ -7,12 +9,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'contactos.html',
 })
 export class ContactosPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  conts
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              public proveedor:BaseExProvider) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ContactosPage');
+     this.proveedor.usuDatos()
+    .subscribe(
+      (data)=>{this.conts = data;}
+      )
   }
   goMenu() {
     this.navCtrl.setRoot('MenuPage');

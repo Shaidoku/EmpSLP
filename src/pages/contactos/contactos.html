@@ -2,7 +2,7 @@
 
   <ion-navbar>
     <ion-title>Contactos</ion-title><ion-buttons end>
-    <button ion-button icon-only (click)="goMenu()">
+    <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
   </ion-buttons>
@@ -12,5 +12,39 @@
 
 
 <ion-content padding>
+
+  <ion-list inset>
+    <ion-item-sliding *ngFor="let cont of conts">
+      <button ion-item>
+        <ion-avatar item-start>
+        <img src="assets/img/u/{{cont.fotoU}}"> 
+        </ion-avatar>
+        <h2>{{cont.nombres}}</h2>
+        <p>{{cont.telefono}}</p>
+      </button>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-list inset>
+    <ion-item-sliding *ngFor="let cont of conts">
+      <button ion-item>
+        <ion-thumbnail item-start>
+        <img src="assets/img/u/{{cont.fotoU}}" /> 
+        </ion-thumbnail>
+        <h2>{{cont.nombres}}</h2>
+        <p>{{cont.telefono}}</p>
+      </button>
+    </ion-item-sliding>
+  </ion-list>
+
+   <ion-list>
+    <ion-item *ngFor="let cont of conts">
+      <ion-thumbnail item-start>
+        <img src="assets/img/u/{{cont.fotoU}}">
+      </ion-thumbnail>
+      <h2>{{cont.nombres}}</h2>
+        <p>{{cont.telefono}}</p>
+    </ion-item>
+  </ion-list>
 
 </ion-content>

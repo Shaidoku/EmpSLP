@@ -1,1 +1,38 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="NAV">
+  <ion-content>
+  	<ion-avatar><img src="assets/img/ica-slidebox-img-1.jpg"></ion-avatar>
+    <ion-list>
+      <button ion-item (click)="goPer()" menuClose>
+      	<ion-icon item-left name="person"></ion-icon>
+        Perfil
+      </button>
+      <button ion-item (click)="goNew()" menuClose>
+      	<ion-icon item-left name="paper"></ion-icon>
+        Noticias
+      </button>
+      <button ion-item (click)="goCal()" menuClose>
+      	<ion-icon item-left name="calendar"></ion-icon>
+        Calendario
+      </button>
+      <button ion-item (click)="goBus()" menuClose>
+      	<ion-icon item-left name="search"></ion-icon>
+        Busqueda
+      </button>
+      <button ion-item (click)="goCon()" menuClose>
+      	<ion-icon item-left name="contacts"></ion-icon>
+        Contactos
+      </button>
+      <button ion-item (click)="goMen()" menuClose>
+      	<ion-icon item-left name="mail"></ion-icon>
+        Mensajes
+      </button>
+      <button ion-item (click)="goConf()" menuClose>
+      	<ion-icon item-left name="settings"></ion-icon>
+        Configuraciones
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<!--<ion-nav [root]="rootPage"></ion-nav>-->
+<ion-nav #NAV [root]="rootPage"></ion-nav>

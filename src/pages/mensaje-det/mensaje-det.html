@@ -1,0 +1,17 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Joan</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-list *ngFor="let mesagge of mesagges">
+    <ion-card-content><p>{{mesagge.mensaje}}</p></ion-card-content>
+    </ion-list>
+</ion-content>
+
+<button ion-button color="secondary" round>Secondary Round</button>

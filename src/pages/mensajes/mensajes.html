@@ -2,7 +2,7 @@
 
   <ion-navbar>
     <ion-title>Mensajes</ion-title><ion-buttons end>
-    <button ion-button icon-only (click)="goMenu()">
+    <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
   </ion-buttons>
@@ -12,5 +12,16 @@
 
 
 <ion-content padding>
+
+	<ion-list inset>
+    <ion-item-sliding>
+      <button ion-item (click)="openM()">
+        <ion-avatar item-start>
+        <img src="assets/img/u/a2.jpg"> 
+        </ion-avatar>
+        <h2>Joan</h2>
+      </button>
+    </ion-item-sliding>
+  </ion-list>
 
 </ion-content>

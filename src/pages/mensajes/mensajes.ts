@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { BaseExProvider } from '../../providers/base-ex/base-ex';
 
 @IonicPage()
 @Component({
@@ -7,14 +8,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'mensajes.html',
 })
 export class MensajesPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  users
+  constructor(public navCtrl: NavController,
+   public navParams: NavParams,
+   public proveedor:BaseExProvider) {
   }
-
+  
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MensajesPage');
+  	this.proveedor.usuDatos()
+    .subscribe(
+    	(data)=>{this.users = data;}
+    	)
   }
-  goMenu() {
-    this.navCtrl.setRoot('MenuPage');
+
+   openM(cal) {
+    this.navCtrl.push('MensajeDetPage');
   }
 }
