@@ -21,6 +21,6 @@ export class LoginPage {
   }
 
   enter() {
-    this.navCtrl.setRoot('CalPage');
+    this.navCtrl.setRoot('PerfilPage');
   }
 }

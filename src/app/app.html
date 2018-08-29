@@ -1,6 +1,6 @@
 <ion-menu [content]="NAV">
   <ion-content>
-  	<ion-avatar><img src="assets/img/ica-slidebox-img-1.jpg"></ion-avatar>
+  	<ion-avatar><img src="assets/img/ica-slidebox-img-1.jpg" width="480" height="230"></ion-avatar>
     <ion-list>
       <button ion-item (click)="goPer()" menuClose>
       	<ion-icon item-left name="person"></ion-icon>
@@ -28,11 +28,14 @@
       </button>
       <button ion-item (click)="goConf()" menuClose>
       	<ion-icon item-left name="settings"></ion-icon>
-        Configuraciones
+        Configuraciones y Soporte
       </button>
+      <button ion-button block color="light">Cerra cesión</button>
     </ion-list>
   </ion-content>
 </ion-menu>
+
+
 
 <!--<ion-nav [root]="rootPage"></ion-nav>-->
 <ion-nav #NAV [root]="rootPage"></ion-nav>

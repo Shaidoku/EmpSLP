@@ -1,7 +1,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Configuraciones</ion-title><ion-buttons end>
+    <ion-title>Configuraciones y Soporte</ion-title><ion-buttons end>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -12,5 +12,32 @@
 
 
 <ion-content padding>
+
+<ion-list>
+  <ion-item>
+    <ion-label><b>Idioma</b></ion-label>
+    <ion-select [(ngModel)]="gaming">
+      <ion-option value="es">Español</ion-option>
+      <ion-option value="en">Inglés</ion-option>
+      <ion-option value="fr">Francés</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+  <font color="black">Hazte premium</font>
+  <a href="https://www.paypal.com/mx/signin?country.x=MX&locale.x=es_MX"><img src="assets/img/pp.png" align="right" width="100" height="25"/>
+  </a>
+</ion-item>
+
+<ion-item>
+  <ion-label>Notificaciones</ion-label>
+  <ion-toggle></ion-toggle>
+</ion-item>
+
+</ion-list>
+<button ion-button full color="dark" outline>Ayuda y reportes</button>
+<button ion-button full color="dark" outline>Preguntas frecuentes</button>
+<button ion-button full color="dark" outline>Terminos y condiciones</button>
+
 
 </ion-content>
