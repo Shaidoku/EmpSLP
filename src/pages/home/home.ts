@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { BaseExProvider } from '../../providers/base-ex/base-ex';
 
 @Component({
   selector: 'page-home',
@@ -10,18 +9,8 @@ export class HomePage {
 
 intros
 
-  constructor(public navCtrl: NavController,public proveedor:BaseExProvider) {}
+  constructor(public navCtrl: NavController) {}
 
   iraLogin(){this.navCtrl.push("LoginPage");}
-
-  ionViewDidLoad(){this.proveedor.introDatos().subscribe((data)=>{this.intros = data;})}
-
-
-
-
-
-
-
-
 
 }

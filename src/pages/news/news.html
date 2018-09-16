@@ -12,11 +12,11 @@
 <ion-content>
 
 <ion-list *ngFor="let news of newss">
-<h4><b>{{news.tituloN}}</b></h4>
+<h4><b>{{news.title}}</b></h4>
 <ion-card>
-  <img src="assets/img/noticias/{{news.fotoN}}"/>
-  <ion-card-content><p>{{news.descripcion}}</p></ion-card-content>
-  <ion-card-content><p><a href="{{news.enlace}}" class="button">Link</a></p></ion-card-content>
+  <img src="{{news.img}}"/>
+  <ion-card-content><p>{{news.excerpt}}</p></ion-card-content>
+  <ion-card-content><p><a href="{{news.link}}" class="button">Link</a></p></ion-card-content>
 </ion-card>
 </ion-list>
 
