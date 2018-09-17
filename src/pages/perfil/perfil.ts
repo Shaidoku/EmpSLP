@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { BaseExProvider } from '../../providers/base-ex/base-ex';
 
 @IonicPage()
 @Component({
@@ -7,12 +8,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'perfil.html',
 })
 export class PerfilPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  account: any;
+  users
+  constructor(public navCtrl: NavController,
+   public navParams: NavParams,
+   public proveedor:BaseExProvider) {
+     this.account = navParams.get('account');
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PerfilPage');
+    this.proveedor.usuDatos()
+    .subscribe(
+      (data)=>{this.users = data;}
+      )
   }
   goMenu() {
     this.navCtrl.setRoot('MenuPage');

@@ -7,7 +7,7 @@
     </div>
   </div>
 
-  <form (click)="enter()">
+
     <ion-list inset>
 
       <ion-item>
@@ -21,10 +21,10 @@
       </ion-item>
 
       <div padding>
-        <button ion-button color="secondary">Iniciar sesión</button>
+        <button ion-button color="secondary" (click)="enter(account)">Iniciar sesión</button>
       </div>
     </ion-list>
-  </form>
+
   <div padding class="centrado">
    <p><ion-label floating>¿Aún no tienes una cuenta? o Ingresa con</ion-label></p>
   </div>
@@ -37,3 +37,6 @@
         <a href="https://accounts.google.com/signin/v2/identifier?passive=1209600&continue=https%3A%2F%2Faccounts.google.com%2FManageAccount&followup=https%3A%2F%2Faccounts.google.com%2FManageAccount&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><img src="assets/img/google.png" width="48" height="48"/></a>
       </div>
 </ion-content>
+<!--[(ngModel)]="account.email"
+  <form (click)="enter()">
+    </form>-->

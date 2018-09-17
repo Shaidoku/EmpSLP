@@ -15,4 +15,6 @@ proDatos(){return this.http.get('http://localhost/app/index.php/proyectoC');}
 notDatos(){return this.http.get('http://localhost/app/index.php/noticiaC');}
 
 menDatos(){return this.http.get('http://localhost/app/index.php/mensajeC');}
+
+chaDatos(){return this.http.get('http://localhost/app/index.php/chatC');}
 }

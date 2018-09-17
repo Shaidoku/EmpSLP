@@ -9,28 +9,23 @@
 </ion-header>
 
 <ion-content padding>
+<ion-card *ngFor="let user of users">
 
+<ion-item *ngIf=" user.email == account.email" >
 <h2>
-ING.Antonio de Jesus Gutierrez Garcia
+{{user.names}}
 </h2>
-
-<ion-card>
-
- <ion-item>
-    <ion-avatar item-start>
-      <img src="assets/img/u/a3.jpg">
-    </ion-avatar>
-    <h2>Estudiante</h2>
+    <h2>{{user.ocup}}</h2>
  </ion-item>
-  <img src="assets/img/u/a3.jpg">
- <ion-card-content>
-    <p><b>Conocimientos:</b> Administracion de servidores, programacion, redes ...</p>
-    <p><b>Edad:</b> 22</p>
-    <p><b>Tel:</b> 4444874635</p>
-    <p><b>Correo:</b> ing.antonio.gutierrezgarcia@outlook.com</p>
+  <img *ngIf=" user.email == account.email"  src="http://192.168.100.7/EmprendedoresSLP/public{{user.foto}}">
+ <ion-card-content *ngIf=" user.email == account.email" >
+    <p><b>Conocimientos: </b>{{user.desc}}</p>
+    <p><b>Edad: </b>{{user.edad}}</p>
+    <p><b>Tel: </b>{{user.tel}}</p>
+    <p><b>Correo: </b>{{user.email}}</p>
  </ion-card-content>
 </ion-card>
-
+<!--
 <ion-list>
 <h2>Proyecto</h2>	
  <ion-card>
@@ -42,7 +37,5 @@ ING.Antonio de Jesus Gutierrez Garcia
   </ion-card-content>
  </ion-card>
 </ion-list>
-
+-->
 </ion-content>
-
-

@@ -9,8 +9,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class LoginPage {
 
     account: { email: string, password: string } = {
-    email: 'ing.antonio.gutierrezgarcia@outlook.com',
-    password: 'ha756STRfa5'
+    email: 'JoanOrtizITSLP@outlook.com',
+    password: '1'
     };
 
   constructor(public navCtrl: NavController,
@@ -20,7 +20,7 @@ export class LoginPage {
     this.navCtrl.push('SignupPage');
   }
 
-  enter() {
-    this.navCtrl.setRoot('PerfilPage');
+  enter(account) {
+    this.navCtrl.setRoot('PerfilPage',{account:account});
   }
 }
