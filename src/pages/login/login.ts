@@ -9,8 +9,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class LoginPage {
 
     account: { email: string, password: string } = {
-    email: 'JoanOrtizITSLP@outlook.com',
-    password: '1'
+    email: null,
+    password: null
     };
 
   constructor(public navCtrl: NavController,
@@ -21,6 +21,9 @@ export class LoginPage {
   }
 
   enter(account) {
-    this.navCtrl.setRoot('PerfilPage',{account:account});
+    if(account.email != null){
+      this.navCtrl.setRoot('../providers/global/GlobalProvider',{account:account})
+    }else{this.navCtrl.setRoot('LoginPage');}
+    ;
   }
 }
