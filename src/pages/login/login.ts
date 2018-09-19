@@ -22,7 +22,7 @@ export class LoginPage {
 
   enter(account) {
     if(account.email != null){
-      this.navCtrl.setRoot('../providers/global/GlobalProvider',{account:account})
+      this.navCtrl.setRoot('PerfilPage',{account:account})
     }else{this.navCtrl.setRoot('LoginPage');}
     ;
   }

@@ -9,17 +9,15 @@
 </ion-header>
 
 <ion-content padding>
-{{ global.myGlobalVar.email }}
+
 <ion-card *ngFor="let user of users">
 
-<ion-item *ngIf=" user.email == global.myGlobalVar.email" >
-<h2>
-{{user.names}}
-</h2>
-    <h2>{{user.ocup}}</h2>
+<ion-item *ngIf=" user.email == 'JoanOrtizITSLP@outlook.com'" >
+<h2>{{user.names}}</h2>
+<h2>{{user.ocup}}</h2>
  </ion-item>
-  <img class="img" *ngIf=" user.email == account.email"  src="http://192.168.100.7/EmprendedoresSLP/public{{user.foto}}">
- <ion-card-content *ngIf=" user.email == account.email" >
+  <img class="img" *ngIf=" user.email == 'JoanOrtizITSLP@outlook.com'"  src="http://192.168.100.7/EmprendedoresSLP/public{{user.foto}}">
+ <ion-card-content *ngIf=" user.email == 'JoanOrtizITSLP@outlook.com'" >
     <p><b>Conocimientos: </b>{{user.desc}}</p>
     <p><b>Edad: </b>{{user.edad}}</p>
     <p><b>Tel: </b>{{user.tel}}</p>

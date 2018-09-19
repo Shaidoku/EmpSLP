@@ -30,7 +30,7 @@
       	<ion-icon item-left name="settings"></ion-icon>
         Configuraciones y Soporte
       </button>
-      <button ion-button block color="light">Cerra cesión</button>
+      <button ion-button block color="light" (click)="goLogin()" menuClose>Cerra cesión</button>
     </ion-list>
   </ion-content>
 </ion-menu>
@@ -38,4 +38,4 @@
 
 
 <!--<ion-nav [root]="rootPage"></ion-nav>-->
-<ion-nav #NAV [root]="rootPage"></ion-nav>
+<ion-nav #NAV [root]="rootPage" swipeBackEnabled="false"></ion-nav>
