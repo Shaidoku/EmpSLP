@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { BaseExProvider } from '../../providers/base-ex/base-ex';
+import { GlobalProvider } from "../../providers/global/global";
 
 @IonicPage()
 @Component({
@@ -8,20 +9,32 @@ import { BaseExProvider } from '../../providers/base-ex/base-ex';
   templateUrl: 'mensajes.html',
 })
 export class MensajesPage {
+  chats
   users
   constructor(public navCtrl: NavController,
    public navParams: NavParams,
-   public proveedor:BaseExProvider) {
+   public proveedor:BaseExProvider,
+   public global: GlobalProvider) {
+  this.myfunction1();
+  }
+
+  myfunction1(){
+    if(this.global.email == '0'){
+      this.navCtrl.setRoot('LoginPage');}
   }
   
   ionViewDidLoad() {
-  	this.proveedor.usuDatos()
+  	this.proveedor.chaDatos()
     .subscribe(
-    	(data)=>{this.users = data;}
+    	(data)=>{this.chats = data;}
     	)
+    this.proveedor.usuDatos()
+    .subscribe(
+      (data)=>{this.users = data;}
+      )
   }
 
-   openM(cal) {
-    this.navCtrl.push('MensajeDetPage');
+   openM(chat,user) {
+    this.navCtrl.push('MensajeDetPage', {chat:chat,user:user});
   }
 }

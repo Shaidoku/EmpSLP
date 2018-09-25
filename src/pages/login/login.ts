@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { GlobalProvider } from "../../providers/global/global";
 
 @IonicPage()
 @Component({
@@ -14,7 +15,15 @@ export class LoginPage {
     };
 
   constructor(public navCtrl: NavController,
-   public navParams: NavParams) {}
+   public navParams: NavParams,
+   public global: GlobalProvider) {this.logout();}
+
+  logout(){
+    if(this.account != null){
+       this.global.email = '0';
+       this.global.password= '0';
+    }
+  }
   
   signup() {
     this.navCtrl.push('SignupPage');

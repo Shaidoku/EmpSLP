@@ -9,32 +9,33 @@
 </ion-header>
 
 <ion-content padding>
-
+  {{ global.auth }}
+   {{ global.email }}
 <ion-card *ngFor="let user of users">
 
-<ion-item *ngIf=" user.email == 'JoanOrtizITSLP@outlook.com'" >
+<ion-item *ngIf=" user.email == global.email" >
 <h2>{{user.names}}</h2>
 <h2>{{user.ocup}}</h2>
  </ion-item>
-  <img class="img" *ngIf=" user.email == 'JoanOrtizITSLP@outlook.com'"  src="http://192.168.100.7/EmprendedoresSLP/public{{user.foto}}">
- <ion-card-content *ngIf=" user.email == 'JoanOrtizITSLP@outlook.com'" >
+  <img class="img" *ngIf=" user.email == global.email"  src="http://192.168.100.7/EmprendedoresSLP/public{{user.foto}}">
+ <ion-card-content *ngIf=" user.email == global.email" >
     <p><b>Conocimientos: </b>{{user.desc}}</p>
     <p><b>Edad: </b>{{user.edad}}</p>
     <p><b>Tel: </b>{{user.tel}}</p>
     <p><b>Correo: </b>{{user.email}}</p>
  </ion-card-content>
 </ion-card>
-<!--
+
 <ion-list>
 <h2>Proyecto</h2>	
- <ion-card>
-  <ion-card-content>
-  	<h2 class="centrado"><b>Tutorias en linea</b></h2>
-    <p>Tutorias en linea para mejorar el desempeño academico...</p>
-    <p><b>Avance:</b> 65%</p>
-    <p><b>Necesidades:</b> Programadores para terminar el el codigo y administar el servidor...</p>
+ <ion-card *ngFor="let project of projects">
+  <ion-card-content *ngIf=" project.user_id == global.email">
+  	<h2 class="centrado"><b>{{project.title}}</b></h2>
+    <p>{{project.desc}}</p>
+    <p><b>Avance:</b> {{project.adv}}</p>
+    <p><b>Necesidades:</b> {{project.need}}</p>
   </ion-card-content>
  </ion-card>
 </ion-list>
--->
+
 </ion-content>

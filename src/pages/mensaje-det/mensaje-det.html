@@ -2,16 +2,38 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Joan</ion-title>
+    <ion-title>{{user.names}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-	<ion-list *ngFor="let mesagge of mesagges">
-    <ion-card-content><p>{{mesagge.mensaje}}</p></ion-card-content>
+	{{chat.id}}
+	{{user.id}}
+	<ion-list *ngFor="let message of messages">
+    <ion-card-content *ngIf=" chat.id == message.chat_id">
+    	<ion-buttons *ngIf=" 1 == message.user_id" end>
+            <button ion-button class="letter" color="secondary" round>
+    	     {{message.message}}
+            </button>
+        </ion-buttons>
+        <ion-buttons *ngIf=" user.id == message.user_id" left>
+            <button ion-button class="letter" color="secondary" round>
+    	     {{message.message}}
+            </button>
+        </ion-buttons>
+    </ion-card-content>
     </ion-list>
+
+    <form>
+        <ion-item>
+            <ion-input type="text" #confpass></ion-input>
+        </ion-item><ion-buttons end><button ion-button color="secondary">
+          	<ion-icon name="send"></ion-icon>
+        </button></ion-buttons>
+        
+    </form>
+
 </ion-content>
 
-<button ion-button color="secondary" round>Secondary Round</button>

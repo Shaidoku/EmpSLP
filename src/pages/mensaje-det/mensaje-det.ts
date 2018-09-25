@@ -16,15 +16,20 @@ import { BaseExProvider } from '../../providers/base-ex/base-ex';
   templateUrl: 'mensaje-det.html',
 })
 export class MensajeDetPage {
-  mesagges
+  chat
+  user
+  messages
   constructor(public navCtrl: NavController, public navParams: NavParams,
-   public proveedor:BaseExProvider) {
-  }
+   public proveedor:BaseExProvider)
+   {
+     this.chat = navParams.get('chat');
+     this.user = navParams.get('user');
+   }
 
   ionViewDidLoad() {
         this.proveedor.menDatos()
     .subscribe(
-    	(data)=>{this.mesagges = data;}
+    	(data)=>{this.messages = data;}
     	)
   }
 

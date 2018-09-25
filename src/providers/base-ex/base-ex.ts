@@ -13,8 +13,8 @@ usuDatos(){return this.http.get('http://localhost/app/index.php/usuarioC');}
 
 proDatos(){return this.http.get('http://localhost/app/index.php/proyectoC');}
 
-notDatos(){return this.http.get('http://192.168.100.7:8080/api/not');}
-//http://emprendedoresslp.test/api/not
+notDatos(){return this.http.get('http://emprendedoresslp.test/api/not');}
+//http://emprendedoresslp.test/api/not http://192.168.100.7:8080/api/not
 
 menDatos(){return this.http.get('http://localhost/app/index.php/mensajeC');}
 
