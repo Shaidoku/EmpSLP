@@ -9,15 +9,13 @@
 </ion-header>
 
 <ion-content padding>
-  {{ global.auth }}
-   {{ global.email }}
+<!--   {{ global.auth }} -->
 <ion-card *ngFor="let user of users">
-
 <ion-item *ngIf=" user.email == global.email" >
 <h2>{{user.names}}</h2>
 <h2>{{user.ocup}}</h2>
  </ion-item>
-  <img class="img" *ngIf=" user.email == global.email"  src="http://192.168.100.7/EmprendedoresSLP/public{{user.foto}}">
+  <img class="img" *ngIf=" user.email == global.email"  src="http://emprendedoresslp.test/public{{user.foto}}">
  <ion-card-content *ngIf=" user.email == global.email" >
     <p><b>Conocimientos: </b>{{user.desc}}</p>
     <p><b>Edad: </b>{{user.edad}}</p>
@@ -29,7 +27,7 @@
 <ion-list>
 <h2>Proyecto</h2>	
  <ion-card *ngFor="let project of projects">
-  <ion-card-content *ngIf=" project.user_id == global.email">
+  <ion-card-content *ngIf=" project.user_id == global.auth">
   	<h2 class="centrado"><b>{{project.title}}</b></h2>
     <p>{{project.desc}}</p>
     <p><b>Avance:</b> {{project.adv}}</p>

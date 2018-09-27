@@ -12,8 +12,9 @@
 	{{chat.id}}
 	{{user.id}}
 	<ion-list *ngFor="let message of messages">
+
     <ion-card-content *ngIf=" chat.id == message.chat_id">
-    	<ion-buttons *ngIf=" 1 == message.user_id" end>
+    	<ion-buttons *ngIf=" global.auth == message.user_id" end>
             <button ion-button class="letter" color="secondary" round>
     	     {{message.message}}
             </button>
@@ -24,7 +25,9 @@
             </button>
         </ion-buttons>
     </ion-card-content>
+
     </ion-list>
+
 
     <form>
         <ion-item>

@@ -1,0 +1,45 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title class="centrado">Bienvenido</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+<h2 class="centrado">Términos y condiciones</h2>
+<p>Para tener acceso a la aplicación el usuario necesita leer y aceptar el presente acuerdo.</p>
+<p class="centrado"> <b>1. Objeto y beneficios.</b>
+<p class="jt">1.1. La aplicación tienen el objetivo de suministrar información útil al ámbito del emprendimiento a través de noticias, será centro de concentración de eventos como son cursos, talleres, foros y derivados que aporten beneficios a los usuarios, al igual que servirá como medio de publicación para el o los proyectos que un usuario este desarrollando dándole la ayuda para encontrar apoyo material o humano en beneficio de su acción.
+<p>1.2. La aplicación permite elegir entre  dos tipos de usuario que son:
+<p>•	Regular 
+<p>•	Premium 
+<p class="jt">Otorgando beneficios mayores al Premium que radican en Publicación de eventos y descuentos en eventos de organizaciones aliadas con Emprendedores S.L.P..
+
+<p class="centrado"><b>2. Obligaciones de las partes</b>
+<p>a)	Usuario
+<p class="jt">2.1. Se compromete a proporcionar información verídica en su perfil, eventos y proyectos que publique no siendo obligado en su perfil a mostrarla en su totalidad la información más que un nombre y foto que de testimonio de su persona.
+<p>2.2. Respetar y mantener discreción de la información de otros usuarios.
+<p class="jt">2.3. Reportar cualquier incidente, desacuerdo y/o conflicto como noticias, usuarios y/o eventos para ser tratadas y supervisadas por los responsables de la aplicación apegándose al presente acuerdo.
+<p class="jt">2.4. Adoptar medidas de seguridad necesarias para preservar la confidencialidad y el secreto de su Usuario y Contraseña de acceso, que serán personales e intransferibles.  
+<p>b)	EMPRENDEDORES S.L.P
+<p>2.5. Comprometido a proporcionar información útil y verídica en publicación de noticias y eventos.
+<p class="jt">2.6. No filtrar, acceder, modificar o violar la información que el usuario proporcione si no es con su consentimiento.
+<p class="jt">2.7. Penalizar a cualquier usuario que infrinja el presente acuerdo acorde al nivel de su acción siendo desde el cierre o bloqueo temporal de su cuenta hasta acción legal si se amerita.
+	<div *ngFor="let user of users">
+<div *ngIf=" user.email == account.email;else content" >
+<div padding class="centrado">
+<button ion-button color="secondary" (click)="Fun1(user)">Aceptar</button>
+<button ion-button color="light" (click)="Fun2()">Declinar</button>
+</div>
+</div>
+</div>
+<!--<ng-template #content>
+<div padding class="centrado">
+<h2 class="centrado">Correo invalido</h2>
+<button ion-button color="light" (click)="Fun2()">Volver</button>
+</div>
+</ng-template>-->
+</ion-content>

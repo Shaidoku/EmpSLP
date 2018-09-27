@@ -12,15 +12,21 @@
 
 
 <ion-content padding>
-
-	<ion-list *ngFor="let chat of chats" inset>
-    <ion-item-sliding *ngFor="let user of users">
-      <button *ngIf=" user.id == chat.user_id_des" ion-item (click)="openM(chat,user)">
-        <ion-avatar  item-start>
-        <img src="http://192.168.100.7/EmprendedoresSLP/public{{user.foto}}"> 
-        </ion-avatar>
-        <h2>{{user.names}}</h2>
-      </button>
+{{global.auth}}
+	<ion-list *ngFor="let user of users" inset>
+    <ion-item-sliding *ngFor="let chat of chats">
+        <button *ngIf=" global.auth == chat.user_id_rem && user.id == chat.user_id_des" ion-item (click)="openM(chat,user)">
+            <ion-avatar  item-start>
+              <img src="http://192.168.100.7/EmprendedoresSLP/public{{user.foto}}"> 
+            </ion-avatar>
+            <h2>{{user.names}}</h2>
+        </button>
+        <button *ngIf=" global.auth == chat.user_id_des && user.id == chat.user_id_rem" ion-item (click)="openM(chat,user)">
+            <ion-avatar  item-start>
+              <img src="http://192.168.100.7/EmprendedoresSLP/public{{user.foto}}"> 
+            </ion-avatar>
+            <h2>{{user.names}}</h2>
+        </button>
     </ion-item-sliding>
   </ion-list>
 

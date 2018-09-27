@@ -17,32 +17,23 @@ export class PerfilPage {
    public navParams: NavParams,
    public proveedor:BaseExProvider,
    public global: GlobalProvider) 
-  {this.account = navParams.get('account');
+  {
+   this.account = navParams.get('account');
+   this.user = navParams.get('user');
    this.myfunction1();
   }
 
   ionViewDidLoad() {
-    this.proveedor.usuDatos()
-    .subscribe(
-      (data)=>{this.users = data;}
-      )
-    this.proveedor.proDatos()
-    .subscribe(
-      (data)=>{this.projects = data;}
-      )
+    this.proveedor.usuDatos().subscribe((data)=>{this.users = data;})
+    this.proveedor.proDatos().subscribe((data)=>{this.projects = data;})
   }
 
   myfunction1(){
-    if(this.account != null){
-       this.global.email = this.account.email;
-       this.global.password = this.account.password;
-    for (var i = 0; i < 1; ++i)
-        { this.global.auth = this.users[i].id;
-          //this.user = this.users[i];
-          //if(this.user.email == this.account.email){this.global.auth = this.user.id;}
-        }
 
+    if(this.account != null){
+       this.global.auth = this.user.id;
     }
+
     if(this.global.email == '0'){
       this.navCtrl.setRoot('LoginPage');
     }
