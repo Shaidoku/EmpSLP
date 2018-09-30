@@ -9,8 +9,7 @@
 
 
 <ion-content padding>
-	{{chat.id}}
-	{{user.id}}
+
 	<ion-list *ngFor="let message of messages">
 
     <ion-card-content *ngIf=" chat.id == message.chat_id">

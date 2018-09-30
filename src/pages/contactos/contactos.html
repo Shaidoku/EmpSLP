@@ -13,14 +13,14 @@
 
 <ion-content padding>
 
-  <ion-list inset>
-    <ion-item-sliding *ngFor="let cont of conts">
+  <ion-list *ngFor="let cont of conts" inset>
+    <ion-item-sliding *ngIf=" global.auth != cont.id">
       <button ion-item>
         <ion-avatar item-start>
-        <img src="assets/img/u/{{cont.fotoU}}"> 
+        <img src="http://162.255.85.22/plesk-site-preview/emprendedoreslp.com/162.255.85.22{{cont.foto}}"> 
         </ion-avatar>
-        <h2>{{cont.nombres}}</h2>
-        <p>{{cont.telefono}}</p>
+        <h2>{{cont.names}}</h2>
+        <p>{{cont.tel}}</p>
       </button>
     </ion-item-sliding>
   </ion-list>
