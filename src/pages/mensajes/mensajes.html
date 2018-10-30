@@ -1,7 +1,8 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Mensajes</ion-title><ion-buttons end>
+    <ion-title>Mensajes</ion-title>
+    <ion-buttons end>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -17,15 +18,15 @@
     <ion-item-sliding *ngFor="let chat of chats">
         <button *ngIf=" global.auth == chat.user_id_rem && user.id == chat.user_id_des" ion-item (click)="openM(chat,user)">
             <ion-avatar  item-start>
-              <img src="http://192.168.100.7/EmprendedoresSLP/public{{user.foto}}"> 
+              <img src="http://emprendedoreslp.test/img/users/{{user.foto}}"> 
             </ion-avatar>
-            <h2>{{user.names}}</h2>
+            <h2>{{user.name}}</h2>
         </button>
         <button *ngIf=" global.auth == chat.user_id_des && user.id == chat.user_id_rem" ion-item (click)="openM(chat,user)">
             <ion-avatar  item-start>
-              <img src="http://162.255.85.22/plesk-site-preview/emprendedoreslp.com/162.255.85.22{{user.foto}}"> 
+              <img src="http://emprendedoreslp.test/img/users/{{user.foto}}"> 
             </ion-avatar>
-            <h2>{{user.names}}</h2>
+            <h2>{{user.name}}</h2>
         </button>
     </ion-item-sliding>
   </ion-list>

@@ -12,10 +12,10 @@
 <!--   {{ global.auth }} -->
 <ion-card *ngFor="let user of users">
 <ion-item *ngIf=" user.email == global.email" >
-<h2>{{user.names}}</h2>
+<h2>{{user.name}}</h2>
 <h2>{{user.ocup}}</h2>
  </ion-item>
-  <img class="img" *ngIf=" user.email == global.email"  src="http://162.255.85.22/plesk-site-preview/emprendedoreslp.com/162.255.85.22{{user.foto}}">
+  <img class="img" *ngIf=" user.email == global.email"  src="http://emprendedoreslp.test/img/users/{{user.foto}}">
  <ion-card-content *ngIf=" user.email == global.email" >
     <p><b>Conocimientos: </b>{{user.desc}}</p>
     <p><b>Edad: </b>{{user.edad}}</p>

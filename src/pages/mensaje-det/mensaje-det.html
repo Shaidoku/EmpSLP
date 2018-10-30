@@ -1,8 +1,8 @@
 
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>{{user.names}}</ion-title>
+  <ion-navbar right>
+    <ion-title>{{user.name}}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -19,7 +19,7 @@
             </button>
         </ion-buttons>
         <ion-buttons *ngIf=" user.id == message.user_id" left>
-            <button ion-button class="letter" color="secondary" round>
+            <button ion-button class="letter" color="light" round>
     	     {{message.message}}
             </button>
         </ion-buttons>
