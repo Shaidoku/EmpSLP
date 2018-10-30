@@ -25,9 +25,10 @@
 </ion-card>
 
 <ion-list>
-<h2>Proyecto</h2>	
  <ion-card *ngFor="let project of projects">
   <ion-card-content *ngIf=" project.user_id == global.auth">
+    
+<h2>Proyecto</h2> 
   	<h2 class="centrado"><b>{{project.title}}</b></h2>
     <p>{{project.desc}}</p>
     <p><b>Avance:</b> {{project.adv}}</p>
